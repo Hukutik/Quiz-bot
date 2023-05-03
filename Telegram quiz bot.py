@@ -5,7 +5,7 @@ from csv import reader
 import random
 
 k=ReplyKeyboardMarkup(keyboard=[[KeyboardButton(text='Begin test')]])
-k1=ReplyKeyboardMarkup(keyboard=[[KeyboardButton(text='Try Again')]])
+k1=ReplyKeyboardMarkup(keyboard=[[KeyboardButton(text='Try again')]])
 start=0
 l=0
 no=0
@@ -49,7 +49,7 @@ def main(ms):
     print(c)
     if c=='/start':
         bot.sendMessage(i,'Welcome',reply_markup=k)#name of test
-    if c=='Begin test' or c=='Try Again':
+    if c=='Begim test' or c=='Try again':
         start=1
         start_time=time()
     if l != len(answer):
@@ -83,7 +83,7 @@ def main(ms):
         if start!=0:
             start=start+1
             l+=1
-bot=t.Bot('') #token
+bot=t.Bot()
 bot.message_loop(main)
 
 while True:
